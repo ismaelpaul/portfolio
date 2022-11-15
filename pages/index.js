@@ -2,10 +2,11 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
 const Navbar = dynamic(() => import('../components/Navbar'));
+const Header = dynamic(() => import('../components/Header'));
 
 export default function Home() {
 	return (
-		<div>
+		<>
 			<Head>
 				<title>Ismael Paul Portfolio</title>
 				<meta name="title" content="Ismael Paul Portfolio" />
@@ -14,8 +15,9 @@ export default function Home() {
 					content="web developer, frontend developer"
 				></meta>
 			</Head>
-
 			<Navbar />
-		</div>
+
+			<Header />
+		</>
 	);
 }
