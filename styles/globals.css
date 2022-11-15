@@ -34,8 +34,13 @@
 		url('../public/fonts/OpenSans-Bold.ttf') format('ttf');
 }
 
+body {
+	background-color: #272f3a;
+}
+
 html,
 body,
+ul,
 p,
 h1 {
 	padding: 0;
