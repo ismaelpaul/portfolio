@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 const Navbar = dynamic(() => import('../components/Navbar'));
 const Header = dynamic(() => import('../components/Header'));
+const About = dynamic(() => import('../components/About'));
 
 export default function Home() {
 	return (
@@ -16,8 +17,8 @@ export default function Home() {
 				></meta>
 			</Head>
 			<Navbar />
-
 			<Header />
+			<About />
 		</>
 	);
 }
