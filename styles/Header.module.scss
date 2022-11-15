@@ -1,12 +1,12 @@
 @import '../styles/variables.scss';
 
 .header {
-	height: 90.4vh;
+	height: 100vh;
 	background-color: $bg-color;
 
 	.text {
 		color: $primary-color;
-		padding-top: 10rem;
+		padding-top: 15rem;
 		margin: 0 10%;
 		font-family: 'OpenSans-Light';
 		font-size: 1rem;
