@@ -1,33 +1,36 @@
-$bg-color: #272f3a;
-$primary-color: #ffffff;
-$secondary-color: #70f5ae;
+@import '../styles/variables.scss';
 
 .nav {
 	background-color: $bg-color;
 	max-width: 100vw;
-}
-.container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 9.6vh;
-	margin: 0 10%;
-}
-.logo {
-	font-family: 'Satisfy-Regular';
-	color: $secondary-color;
-	font-size: 1.25rem;
-}
-.logo,
-.icons {
-	height: 1.5rem;
-}
-.dot,
-.icons {
-	color: $primary-color;
-}
-.icons {
-	font-size: 1.5rem;
-	display: flex;
-	gap: 1.5rem;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 9.6vh;
+		margin: 0 10%;
+
+		.logo {
+			font-family: 'Satisfy-Regular';
+			color: $secondary-color;
+			font-size: 1.25rem;
+		}
+
+		.icons {
+			font-size: 1.5rem;
+			display: flex;
+			gap: 1.5rem;
+		}
+
+		.logo,
+		.icons {
+			height: 1.5rem;
+		}
+
+		.dot,
+		.icons {
+			color: $primary-color;
+		}
+	}
 }
