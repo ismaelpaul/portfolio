@@ -1,0 +1,26 @@
+@import '../styles/variables.scss';
+
+.header {
+	height: 90.4vh;
+	background-color: $bg-color;
+
+	.text {
+		color: $primary-color;
+		padding-top: 10rem;
+		margin: 0 10%;
+		font-family: 'OpenSans-Light';
+		font-size: 1rem;
+	}
+	.text span {
+		color: $secondary-color;
+	}
+	.text h1 {
+		font-size: 1.3rem;
+		font-family: 'OpenSans-Regular';
+		line-height: 1.8rem;
+	}
+	.text h1 span {
+		color: $secondary-color;
+		font-family: 'OpenSans-Bold';
+	}
+}
