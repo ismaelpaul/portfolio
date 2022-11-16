@@ -1,0 +1,14 @@
+@use '../styles/abstracts' as a;
+
+.container {
+	margin: 0 10%;
+
+	h2 {
+		color: a.$primary-color;
+		font-family: 'OpenSans-SemiBold';
+		font-size: 1.25rem;
+	}
+	h2 span {
+		color: a.$secondary-color;
+	}
+}

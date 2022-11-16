@@ -1,0 +1,54 @@
+@use '../styles/abstracts' as a;
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	h3 {
+		padding-top: 2rem;
+		color: a.$primary-color;
+		font-family: a.$font-bold;
+		font-size: 0.9rem;
+	}
+	p {
+		text-align: center;
+		color: a.$primary-color;
+		font-family: a.$font-regular;
+		font-size: 0.8rem;
+		line-height: 1.2rem;
+	}
+	.ncNews {
+		width: 15rem;
+		height: auto;
+	}
+	.icons {
+		padding: 1rem;
+		color: a.$secondary-color;
+		font-size: 1.2rem;
+		span {
+			padding: 0.2rem;
+		}
+	}
+	.buttons {
+		display: flex;
+		flex-direction: column;
+		button {
+			color: a.$primary-color;
+			background-color: a.$bg-color;
+			padding: 0.8rem 6.2rem;
+			margin-bottom: 0.7rem;
+			border: 1px solid a.$primary-color;
+			border-radius: 0.3rem;
+			font-family: a.$font-semibold;
+			font-size: 0.875rem;
+			cursor: pointer;
+			&:hover {
+				color: a.$bg-color;
+				border: 1px solid a.$secondary-color;
+				background: a.$secondary-color;
+				transition: all 0.5s ease-in;
+			}
+		}
+	}
+}

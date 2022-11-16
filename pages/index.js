@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
+import Projects from '../components/Projects';
 
 const Navbar = dynamic(() => import('../components/Navbar'));
 const Header = dynamic(() => import('../components/Header'));
@@ -19,6 +20,7 @@ export default function Home() {
 			<Navbar />
 			<Header />
 			<About />
+			<Projects />
 		</>
 	);
 }
