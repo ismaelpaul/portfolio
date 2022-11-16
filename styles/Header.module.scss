@@ -1,27 +1,27 @@
-@import '../styles/variables.scss';
+@use '../styles/abstracts' as a;
 
 .header {
 	height: 100vh;
-	background-color: $bg-color;
+	background-color: a.$bg-color;
 
 	.text {
-		color: $primary-color;
+		color: a.$primary-color;
 		padding-top: 15rem;
 		margin: 0 10%;
-		font-family: 'OpenSans-Light';
+		font-family: a.$font-light;
 		font-size: 1rem;
 	}
 	.text span {
-		color: $secondary-color;
+		color: a.$secondary-color;
 	}
 	.text h1 {
 		padding-top: 1.8rem;
 		font-size: 1.3rem;
-		font-family: 'OpenSans-Regular';
+		font-family: a.$font-regular;
 		line-height: 1.8rem;
 	}
 	.text h1 span {
-		color: $secondary-color;
-		font-family: 'OpenSans-Bold';
+		color: a.$secondary-color;
+		font-family: a.$font-bold;
 	}
 }
