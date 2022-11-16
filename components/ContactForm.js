@@ -21,7 +21,6 @@ const ContactForm = () => {
 			method: 'post',
 			body: JSON.stringify(formData),
 		});
-		console.log(formData);
 	}
 
 	return (
