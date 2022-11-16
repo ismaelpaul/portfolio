@@ -1,0 +1,22 @@
+@use '../styles/abstracts' as a;
+
+.container {
+	margin: 0 10%;
+	margin-top: 3rem;
+
+	h2 {
+		color: a.$primary-color;
+		font-family: a.$font-semibold;
+		font-size: 1.25rem;
+	}
+	h2 span {
+		color: a.$secondary-color;
+	}
+	.content {
+		padding-top: 1.5rem;
+		color: a.$primary-color;
+		font-family: a.$font-regular;
+		font-size: 0.8rem;
+		text-align: center;
+	}
+}
