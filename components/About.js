@@ -70,6 +70,9 @@ const About = () => {
 								<span>PostgreSQL</span>
 							</li>
 							<li>
+								<span>Firebase</span>
+							</li>
+							<li>
 								<span>Express</span>
 							</li>
 							<li>
