@@ -12,6 +12,7 @@
 		color: a.$secondary-color;
 	}
 	.content {
+		padding-top: 1.5rem;
 		color: a.$primary-color;
 		font-family: a.$font-regular;
 
@@ -40,5 +41,6 @@
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
+		margin-bottom: 3rem;
 	}
 }
