@@ -2,14 +2,15 @@
 
 .header {
 	height: 100vh;
-	background-color: a.$bg-color;
 
 	.text {
 		color: a.$primary-color;
-		padding-top: 15rem;
 		margin: 0 10%;
 		font-family: a.$font-light;
 		font-size: 1rem;
+		position: absolute;
+		top: 45%;
+		transform: translateY(-50%);
 	}
 	.text span {
 		color: a.$secondary-color;
