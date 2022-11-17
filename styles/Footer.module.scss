@@ -1,0 +1,26 @@
+@use '../styles/abstracts/' as a;
+
+.line {
+	border: 0.5px solid;
+	border-color: #333e4c;
+	margin-top: 3rem;
+}
+
+.container {
+	height: 7vh;
+	margin: 0 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.text {
+		color: a.$primary-color;
+		text-align: center;
+		font-family: a.$font-light;
+		font-size: 0.8rem;
+		// margin-bottom: 1rem;
+		span {
+			color: a.$secondary-color;
+			padding: 0.5rem 0.3rem;
+		}
+	}
+}
