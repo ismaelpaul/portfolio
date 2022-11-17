@@ -1,7 +1,7 @@
 @use '../styles/abstracts' as a;
 
 .container {
-	margin: 0 10%;
+	margin: 5rem 10%;
 
 	h2 {
 		color: a.$primary-color;
@@ -10,5 +10,55 @@
 	}
 	h2 span {
 		color: a.$secondary-color;
+	}
+}
+
+/* extra small  */
+
+@media screen and (min-width: 320px) {
+	.container {
+		h2 {
+			font-size: 1.3rem;
+		}
+	}
+}
+/* small  */
+
+@media screen and (min-width: 576px) {
+	.container {
+		h2 {
+			font-size: 1.4rem;
+		}
+	}
+}
+/* medium */
+
+@media screen and (min-width: 768px) {
+	.container {
+		h2 {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+/* large */
+
+@media screen and (min-width: 992px) {
+	.container {
+		margin-top: 10rem;
+		h2 {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+/* extra large */
+
+@media screen and (min-width: 1200px) {
+	.container {
+		margin-top: 15rem;
+		h2 {
+			font-size: 1.7rem;
+		}
 	}
 }

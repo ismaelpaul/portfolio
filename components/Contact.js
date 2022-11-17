@@ -11,7 +11,7 @@ const Contact = () => {
 				<div className={styles.content}>
 					<p>
 						Feel free to contact me by submitting the form below and I will get
-						back to you as soon as possible
+						back to you as soon as possible.
 					</p>
 					<ContactForm />
 				</div>

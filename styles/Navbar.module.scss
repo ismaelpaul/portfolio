@@ -39,3 +39,18 @@
 		}
 	}
 }
+
+/* extra large */
+
+@media screen and (min-width: 1200px) {
+	.nav {
+		.container {
+			.logo {
+				font-size: 1.5rem;
+			}
+			.icons {
+				font-size: 1.7rem;
+			}
+		}
+	}
+}

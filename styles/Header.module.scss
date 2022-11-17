@@ -7,22 +7,99 @@
 		color: a.$primary-color;
 		margin: 0 10%;
 		font-family: a.$font-light;
-		font-size: 1rem;
 		position: absolute;
 		top: 45%;
 		transform: translateY(-50%);
+
+		p {
+			font-size: 1rem;
+		}
+		span {
+			color: a.$secondary-color;
+		}
+
+		h1 {
+			padding-top: 1.8rem;
+			font-size: 1.3rem;
+			font-family: a.$font-regular;
+			line-height: 1.8rem;
+		}
+
+		h1 span {
+			color: a.$secondary-color;
+			font-family: a.$font-bold;
+		}
 	}
-	.text span {
-		color: a.$secondary-color;
+}
+
+/* small  */
+
+@media screen and (min-width: 576px) {
+	.header {
+		.text {
+			max-width: 60%;
+
+			p {
+				font-size: 1.1rem;
+			}
+
+			h1 {
+				font-size: 1.5rem;
+				line-height: 2rem;
+			}
+		}
 	}
-	.text h1 {
-		padding-top: 1.8rem;
-		font-size: 1.3rem;
-		font-family: a.$font-regular;
-		line-height: 1.8rem;
+}
+
+/* medium */
+
+@media screen and (min-width: 768px) {
+	.header {
+		.text {
+			p {
+				font-size: 1.2rem;
+			}
+
+			h1 {
+				font-size: 1.6rem;
+				line-height: 2.2rem;
+			}
+		}
 	}
-	.text h1 span {
-		color: a.$secondary-color;
-		font-family: a.$font-bold;
+}
+
+/* large */
+
+@media screen and (min-width: 992px) {
+	.header {
+		.text {
+			max-width: 45%;
+			p {
+				font-size: 1.3rem;
+			}
+
+			h1 {
+				font-size: 1.7rem;
+				line-height: 2.3rem;
+			}
+		}
+	}
+}
+
+/* extra large */
+
+@media screen and (min-width: 1200px) {
+	.header {
+		.text {
+			max-width: 40%;
+			p {
+				font-size: 1.4rem;
+			}
+
+			h1 {
+				font-size: 2rem;
+				line-height: 2.7rem;
+			}
+		}
 	}
 }

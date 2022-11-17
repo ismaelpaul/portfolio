@@ -4,6 +4,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-top: 2rem;
 
 	h3 {
 		padding-top: 2rem;
@@ -50,6 +51,112 @@
 				background: a.$secondary-color;
 				transition: all 0.3s ease-in;
 			}
+		}
+	}
+}
+
+/* extra small  */
+
+@media screen and (min-width: 320px) {
+	.container {
+		h3 {
+			font-size: 1rem;
+		}
+		p {
+			font-size: 0.9rem;
+			line-height: 1.3rem;
+		}
+		.icons {
+			padding: 1.1rem 0;
+			font-size: 1.3rem;
+			span {
+				padding: 0.3rem;
+			}
+		}
+	}
+}
+/* small  */
+
+@media screen and (min-width: 576px) {
+	.container {
+		margin-top: 3rem;
+		h3 {
+			font-size: 1.1rem;
+		}
+		p {
+			max-width: 70%;
+			font-size: 1rem;
+			line-height: 1.5rem;
+		}
+		.icons {
+			padding: 1.5rem 0;
+			font-size: 1.4rem;
+			span {
+				padding: 0.4rem;
+			}
+		}
+		.buttons {
+			flex-direction: row;
+			gap: 1rem;
+			button {
+				padding: 0.5rem 3rem;
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+/* medium */
+
+@media screen and (min-width: 768px) {
+	.container {
+		margin-top: 4rem;
+		h3 {
+			font-size: 1.3rem;
+		}
+		.bibliotech {
+			width: 18rem;
+			height: auto;
+		}
+		.icons {
+			padding: 1.5rem 0;
+			font-size: 1.4rem;
+			span {
+				padding: 0.4rem;
+			}
+		}
+	}
+}
+
+/* large */
+
+@media screen and (min-width: 992px) {
+	.container {
+		margin-top: 5rem;
+		h3 {
+			font-size: 1.4rem;
+		}
+		p {
+			max-width: 60%;
+		}
+		.bibliotech {
+			width: 22rem;
+			height: auto;
+		}
+	}
+}
+
+/* extra large */
+
+@media screen and (min-width: 1200px) {
+	.container {
+		margin-top: 7rem;
+		h3 {
+			font-size: 1.5rem;
+		}
+		.bibliotech {
+			width: 30rem;
+			height: auto;
 		}
 	}
 }

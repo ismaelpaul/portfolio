@@ -10,6 +10,11 @@ const About = () => {
 					About me<span>.</span>
 				</h2>
 				<div className={styles.content}>
+					<Image
+						className={styles.profile}
+						src={profile}
+						alt="Profile image of the developer"
+					/>
 					<div className={styles.text}>
 						<p>
 							I started programming for fun, playing around with p5.js and I
@@ -86,11 +91,6 @@ const About = () => {
 							</li>
 						</ul>
 					</div>
-					<Image
-						className={styles.profile}
-						src={profile}
-						alt="Profile image of the developer"
-					/>
 				</div>
 			</div>
 		</section>
