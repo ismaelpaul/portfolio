@@ -8,31 +8,35 @@
 
 @font-face {
 	font-family: 'OpenSans-Light';
-	font-style: normal;
-	font-display: swap;
 	src: local('OpenSans-Light'),
-		url('../public/fonts/OpenSans-Light.ttf') format('ttf');
+		url('../public/fonts/OpenSans-Light.ttf') format('ttf'),
+		url('../public/fonts/OpenSans-Light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
 	font-family: 'OpenSans-Regular';
-	font-style: normal;
-	font-display: swap;
 	src: local('OpenSans-Regular'),
-		url('../public/fonts/OpenSans-Regular.ttf') format('ttf');
+		url('../public/fonts/OpenSans-Regular.ttf') format('ttf'),
+		url('../public/fonts/OpenSans-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
 	font-family: 'OpenSans-SemiBold';
-	font-style: normal;
-	font-display: swap;
 	src: local('OpenSans-SemiBold'),
-		url('../public/fonts/OpenSans-SemiBold.ttf') format('ttf');
+		url('../public/fonts/OpenSans-SemiBold.ttf') format('ttf')
+			url('../public/fonts/OpenSans-SemiBold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
 	font-family: 'OpenSans-Bold';
-	font-style: normal;
-	font-display: swap;
 	src: local('OpenSans-Bold'),
-		url('../public/fonts/OpenSans-Bold.ttf') format('ttf');
+		url('../public/fonts/OpenSans-Bold.ttf') format('ttf'),
+		url('../public/fonts/OpenSans-Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
 body {
