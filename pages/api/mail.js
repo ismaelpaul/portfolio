@@ -12,7 +12,7 @@ export default function handler(req, res) {
 
 	const data = {
 		to: 'ismaafp@gmail.com',
-		from: 'hello@ismaelpaul.com',
+		from: 'dev@ismaelpaul.com',
 		subject: 'New message from your portfolio!',
 		text: message,
 		html: message.replace(/\r\n/g, '<br>'),
