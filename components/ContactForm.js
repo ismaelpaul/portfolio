@@ -17,10 +17,10 @@ const ContactForm = () => {
 		setInputEmail('');
 		setInputMessage('');
 
-		fetch('/api/mail', {
+		await fetch('/api/mail', {
 			method: 'post',
 			body: JSON.stringify(formData),
-		});
+		}).then((response) => response.json());
 	}
 
 	return (
