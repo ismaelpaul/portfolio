@@ -10,6 +10,7 @@ import {
 	SiHeroku,
 	SiNetlify,
 } from 'react-icons/si';
+import { Tooltip } from '@nextui-org/react';
 
 const NcNews = () => {
 	return (
@@ -25,30 +26,32 @@ const NcNews = () => {
 				website.
 			</p>
 			<div className={styles.icons}>
-				<span tooltip="React" flow="up">
+				<Tooltip content={'React'} css={{ fontFamily: 'OpenSans-Regular' }}>
 					<FaReact />
-				</span>
-				<span tooltip="Node.js" flow="up">
+				</Tooltip>
+
+				<Tooltip content={'Node.js'} css={{ fontFamily: 'OpenSans-Regular' }}>
 					<FaNodeJs />
-				</span>
-				<span tooltip="Express.js" flow="up">
+				</Tooltip>
+				<Tooltip content={'Express'} css={{ fontFamily: 'OpenSans-Regular' }}>
 					<SiExpress />
-				</span>
-				<span tooltip="PostreSQL" flow="up">
+				</Tooltip>
+				<Tooltip content={'PostgrSQL'} css={{ fontFamily: 'OpenSans-Regular' }}>
 					<SiPostgresql />
-				</span>
-				<span tooltip="CSS3" flow="up">
+				</Tooltip>
+
+				<Tooltip content={'CSS'} css={{ fontFamily: 'OpenSans-Regular' }}>
 					<SiCss3 />
-				</span>
-				<span tooltip="Jest" flow="up">
+				</Tooltip>
+				<Tooltip content={'Jest'} css={{ fontFamily: 'OpenSans-Regular' }}>
 					<SiJest />
-				</span>
-				<span tooltip="Heroku" flow="up">
+				</Tooltip>
+				<Tooltip content={'Heroku'} css={{ fontFamily: 'OpenSans-Regular' }}>
 					<SiHeroku />
-				</span>
-				<span tooltip="Netlify" flow="up">
+				</Tooltip>
+				<Tooltip content={'Netlify'} css={{ fontFamily: 'OpenSans-Regular' }}>
 					<SiNetlify />
-				</span>
+				</Tooltip>
 			</div>
 			<div className={styles.buttons}>
 				<a

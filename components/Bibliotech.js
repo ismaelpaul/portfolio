@@ -3,6 +3,7 @@ import bibliotechMockup from '../public/imgs/bibliotech-mockup.png';
 import styles from '../styles/Bibliotech.module.scss';
 import { FaReact } from 'react-icons/fa';
 import { SiCss3, SiExpo, SiFirebase } from 'react-icons/si';
+import { Tooltip } from '@nextui-org/react';
 
 const Bibliotech = () => {
 	return (
@@ -15,19 +16,24 @@ const Bibliotech = () => {
 			/>
 			<p>A Full Stack peer-to-peer booklending app.</p>
 			<div className={styles.icons}>
-				<span tooltip="React Native" flow="up">
+				<Tooltip
+					content={'React Native'}
+					css={{ fontFamily: 'OpenSans-Regular' }}
+				>
 					<FaReact />
-				</span>
+				</Tooltip>
 
-				<span tooltip="Expo" flow="up">
+				<Tooltip content={'Expo'} css={{ fontFamily: 'OpenSans-Regular' }}>
 					<SiExpo />
-				</span>
-				<span tooltip="CSS3" flow="up">
+				</Tooltip>
+
+				<Tooltip content={'CSS'} css={{ fontFamily: 'OpenSans-Regular' }}>
 					<SiCss3 />
-				</span>
-				<span tooltip="Firebase" flow="up">
+				</Tooltip>
+
+				<Tooltip content={'Firebase'} css={{ fontFamily: 'OpenSans-Regular' }}>
 					<SiFirebase />
-				</span>
+				</Tooltip>
 			</div>
 			<div className={styles.buttons}>
 				<a
