@@ -12,12 +12,23 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Ismael Paul Portfolio</title>
-				<meta name="title" content="Ismael Paul Portfolio" />
+				<title>Ismael Paul</title>
+				<meta name="title" content="Ismael Paul" />
+				<meta
+					name="description"
+					content="Full Stack Developer based in Manchester."
+				/>
+				<meta property="og:type" content="website" />
 				<meta
 					name="keywords"
 					content="web developer, frontend developer"
 				></meta>
+				<meta property="og:URL" content="https://www.ismaelpaul.com" />
+				<meta property="og:title" content="Ismael Paul" />
+				<meta
+					property="og:description"
+					content="Full Stack Developer based in Manchester."
+				/>
 			</Head>
 			<Navbar />
 			<Header />
