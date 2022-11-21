@@ -5,6 +5,7 @@ const ContactForm = () => {
 	const [inputName, setInputName] = useState('');
 	const [inputEmail, setInputEmail] = useState('');
 	const [inputMessage, setInputMessage] = useState('');
+	const [wasSubmitted, setWasSubmitted] = useState(false);
 
 	async function handleSubmit(e) {
 		e.preventDefault();
@@ -21,6 +22,8 @@ const ContactForm = () => {
 			method: 'post',
 			body: JSON.stringify(formData),
 		}).then((response) => response.json());
+
+		setWasSubmitted(true);
 	}
 
 	return (
@@ -34,6 +37,7 @@ const ContactForm = () => {
 						placeholder="Enter your name"
 						onChange={(e) => setInputName(e.target.value)}
 						value={inputName}
+						required
 					/>
 				</div>
 				<div className={styles.email}>
@@ -44,6 +48,7 @@ const ContactForm = () => {
 						placeholder="Enter your email"
 						onChange={(e) => setInputEmail(e.target.value)}
 						value={inputEmail}
+						required
 					/>
 				</div>
 				<div className={styles.message}>
@@ -53,11 +58,18 @@ const ContactForm = () => {
 						placeholder="Hello..."
 						onChange={(e) => setInputMessage(e.target.value)}
 						value={inputMessage}
+						required
 					/>
 				</div>
-				<button className={styles.submitButton} type="submit">
-					Get in touch
-				</button>
+				{wasSubmitted ? (
+					<p className={styles.submittedMessage}>
+						Your message has been successfully sent. Thank you!
+					</p>
+				) : (
+					<button className={styles.submitButton} type="submit">
+						Get in touch
+					</button>
+				)}
 			</form>
 		</div>
 	);
