@@ -18,7 +18,7 @@ const Navbar = () => {
 						target="_blank"
 						rel="noreferrer"
 					>
-						<FaGithub />
+						<FaGithub className={styles.github} />
 					</a>
 					<a
 						title="linkedin"
@@ -26,7 +26,7 @@ const Navbar = () => {
 						target="_blank"
 						rel="noreferrer"
 					>
-						<FaLinkedin />
+						<FaLinkedin className={styles.linkedin} />
 					</a>
 				</div>
 			</div>

@@ -1,11 +1,20 @@
+import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import profile from '../public/imgs/profile-img.png';
 import styles from '../styles/About.module.scss';
 
 const About = () => {
+	const { ref: textRef, inView: isTextVisible } = useInView();
+	const { ref: containerRef, inView: isContainerVisible } = useInView();
+
 	return (
 		<section>
-			<div className={styles.container}>
+			<div
+				ref={containerRef}
+				className={`${styles.container} ${
+					isContainerVisible ? styles.containerAnimated : ''
+				}`}
+			>
 				<h2>
 					About me<span>.</span>
 				</h2>
@@ -15,7 +24,12 @@ const About = () => {
 						src={profile}
 						alt="Profile image of the developer"
 					/>
-					<div className={styles.text}>
+					<div
+						ref={textRef}
+						className={`${styles.text} ${
+							isTextVisible ? styles.textAnimated : ''
+						}`}
+					>
 						<p>
 							I started programming for fun, playing around with p5.js and I
 							really enjoyed it. I’m switching my career path to Software

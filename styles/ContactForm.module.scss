@@ -1,57 +1,64 @@
 @use '../styles/abstracts' as a;
 
-.name,
-.email,
-.message {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	margin: 1rem 0 1rem 0;
-	label {
-		margin-bottom: 0.3rem;
+.container {
+	opacity: 0;
+	transform: translateY(+15%);
+	.name,
+	.email,
+	.message {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin: 1rem 0 1rem 0;
+		label {
+			margin-bottom: 0.3rem;
+			font-family: a.$font-semibold;
+		}
+		input,
+		textarea {
+			width: 100%;
+			padding: 0.6rem;
+			border: 2px solid a.$primary-color;
+			border-radius: 0.3rem;
+			font-family: a.$font-regular;
+		}
+		textarea {
+			min-height: 6rem;
+		}
+		input:focus,
+		textarea:focus {
+			outline: none;
+			border: 2px solid a.$secondary-color;
+			border-radius: 0.3rem;
+			box-shadow: 0px 1px 5px a.$secondary-color;
+		}
+	}
+
+	.submitButton {
+		color: a.$primary-color;
+		background-color: a.$bg-color;
+		padding: 0.8rem 5.2rem;
+		margin: 0.5rem 0;
+		border: 1px solid a.$primary-color;
+		border-radius: 0.3rem;
+		font-family: a.$font-semibold;
+		font-size: 0.875rem;
+		cursor: pointer;
+		&:hover {
+			color: a.$bg-color;
+			border: 1px solid a.$secondary-color;
+			background: a.$secondary-color;
+			transition: all 0.3s ease-in;
+		}
+	}
+	.submittedMessage {
+		margin: 2rem 0;
+		color: a.$secondary-color;
 		font-family: a.$font-semibold;
 	}
-	input,
-	textarea {
-		width: 100%;
-		padding: 0.6rem;
-		border: 2px solid a.$primary-color;
-		border-radius: 0.3rem;
-		font-family: a.$font-regular;
-	}
-	textarea {
-		min-height: 6rem;
-	}
-	input:focus,
-	textarea:focus {
-		outline: none;
-		border: 2px solid a.$secondary-color;
-		border-radius: 0.3rem;
-		box-shadow: 0px 1px 5px a.$secondary-color;
-	}
 }
-
-.submitButton {
-	color: a.$primary-color;
-	background-color: a.$bg-color;
-	padding: 0.8rem 5.2rem;
-	margin: 0.5rem 0;
-	border: 1px solid a.$primary-color;
-	border-radius: 0.3rem;
-	font-family: a.$font-semibold;
-	font-size: 0.875rem;
-	cursor: pointer;
-	&:hover {
-		color: a.$bg-color;
-		border: 1px solid a.$secondary-color;
-		background: a.$secondary-color;
-		transition: all 0.3s ease-in;
-	}
-}
-.submittedMessage {
-	margin: 2rem 0;
-	color: a.$secondary-color;
-	font-family: a.$font-semibold;
+.containerAnimated {
+	animation: fade-in a.$text-load-time ease-out forwards;
 }
 /* extra small */
 
@@ -91,5 +98,18 @@
 			font-size: 0.875rem;
 			padding: 0.8rem 5.2rem;
 		}
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(+15%);
+		filter: blur(2rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+		filter: blur(0rem);
 	}
 }

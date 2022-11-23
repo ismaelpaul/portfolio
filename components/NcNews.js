@@ -11,10 +11,18 @@ import {
 	SiNetlify,
 } from 'react-icons/si';
 import { Tooltip } from '@nextui-org/react';
+import { useInView } from 'react-intersection-observer';
 
 const NcNews = () => {
+	const { ref: containerRef, inView: isContainerVisible } = useInView();
+
 	return (
-		<div className={styles.container}>
+		<div
+			ref={containerRef}
+			className={`${styles.container} ${
+				isContainerVisible ? styles.containerAnimated : ''
+			}`}
+		>
 			<h3>NC News</h3>
 			<Image
 				className={styles.ncNews}

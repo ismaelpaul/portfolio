@@ -9,7 +9,8 @@
 		font-family: a.$font-light;
 		position: absolute;
 		top: 45%;
-		transform: translateY(-50%);
+		opacity: 0;
+		animation: fade-in a.$header-load-time ease-out forwards;
 
 		p {
 			font-size: 1rem;
@@ -101,5 +102,18 @@
 				line-height: 2.7rem;
 			}
 		}
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(+25%);
+		filter: blur(2rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+		filter: blur(0);
 	}
 }

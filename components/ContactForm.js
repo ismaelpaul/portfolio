@@ -1,5 +1,6 @@
-import { useState } from 'react';
 import styles from '../styles/ContactForm.module.scss';
+import { useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 const ContactForm = () => {
 	const [inputName, setInputName] = useState('');
@@ -7,6 +8,7 @@ const ContactForm = () => {
 	const [inputMessage, setInputMessage] = useState('');
 	const [wasSubmitted, setWasSubmitted] = useState(false);
 
+	const { ref: containerRef, inView: isContainerVisible } = useInView();
 	async function handleSubmit(e) {
 		e.preventDefault();
 		const formData = {};
@@ -27,7 +29,12 @@ const ContactForm = () => {
 	}
 
 	return (
-		<div className={styles.container}>
+		<div
+			ref={containerRef}
+			className={`${styles.container} ${
+				isContainerVisible ? styles.containerAnimated : ''
+			}`}
+		>
 			<form method="post" onSubmit={handleSubmit}>
 				<div className={styles.name}>
 					<label htmlFor="name">Name</label>

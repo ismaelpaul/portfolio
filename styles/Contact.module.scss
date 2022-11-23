@@ -3,6 +3,8 @@
 .container {
 	margin: 0 10%;
 	margin-top: 3rem;
+	opacity: 0;
+	transform: translateY(+15%);
 
 	h2 {
 		color: a.$primary-color;
@@ -21,6 +23,10 @@
 			margin-bottom: 2rem;
 		}
 	}
+}
+
+.containerAnimated {
+	animation: fade-in a.$text-load-time ease-out forwards;
 }
 
 @media screen and (min-width: 320px) {
@@ -93,5 +99,18 @@
 		.content {
 			max-width: 35%;
 		}
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(+15%);
+		filter: blur(2rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+		filter: blur(0rem);
 	}
 }

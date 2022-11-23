@@ -2,6 +2,8 @@
 
 .container {
 	margin: 0 10%;
+	opacity: 0;
+	transform: translateY(+15%);
 
 	h2 {
 		color: a.$primary-color;
@@ -12,12 +14,14 @@
 		color: a.$secondary-color;
 	}
 	.content {
-		margin-top: 2rem;
+		margin-top: 1rem;
 		color: a.$primary-color;
 		font-family: a.$font-regular;
 
 		.text {
-			padding-top: 1rem;
+			opacity: 0;
+			transform: translateY(+25%);
+
 			p,
 			ul {
 				font-size: 0.8rem;
@@ -37,6 +41,9 @@
 				color: a.$primary-color;
 			}
 		}
+		.textAnimated {
+			animation: fade-in a.$text-load-time ease-out forwards;
+		}
 	}
 	.profile {
 		width: 12rem;
@@ -46,6 +53,9 @@
 	}
 }
 
+.containerAnimated {
+	animation: fade-in a.$text-load-time ease-out forwards;
+}
 /* extra small  */
 
 @media screen and (min-width: 320px) {
@@ -55,7 +65,6 @@
 		}
 		.content {
 			.text {
-				padding-top: 1.5rem;
 				p,
 				ul {
 					font-size: 0.9rem;
@@ -74,7 +83,7 @@
 		}
 		.content {
 			.text {
-				padding-top: 2rem;
+				padding-top: 1rem;
 				p,
 				ul {
 					font-size: 1rem;
@@ -146,6 +155,31 @@
 			font-size: 1.7rem;
 		}
 		.content {
+			padding-top: 2rem;
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: center;
+
+			.text {
+				max-width: 50%;
+			}
+		}
+		.profile {
+			width: 22rem;
+			height: 22rem;
+			margin: auto;
+		}
+	}
+}
+
+/* eXXtra large */
+@media screen and (min-width: 1600px) {
+	.container {
+		margin: 0 10%;
+		h2 {
+			font-size: 1.7rem;
+		}
+		.content {
 			padding-top: 3rem;
 			display: flex;
 			flex-direction: row-reverse;
@@ -160,5 +194,17 @@
 			height: 22rem;
 			margin: auto;
 		}
+	}
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(+15%);
+		filter: blur(2rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+		filter: blur(0rem);
 	}
 }
