@@ -21,7 +21,7 @@ export default function Home() {
 				<meta property="og:type" content="website" />
 				<meta
 					name="keywords"
-					content="web developer, frontend developer"
+					content="web developer, frontend developer, full stack developer"
 				></meta>
 				<meta property="og:URL" content="https://www.ismaelpaul.com" />
 				<meta property="og:title" content="Ismael Paul" />
