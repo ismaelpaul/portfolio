@@ -80,13 +80,19 @@ const About = () => {
 								<span>CSS3</span>
 							</li>
 							<li>
-								<span>SaSS</span>
+								<span>SASS</span>
+							</li>
+							<li>
+								<span>Redux</span>
 							</li>
 							<li>
 								<span>Node.js</span>
 							</li>
 							<li>
 								<span>PostgreSQL</span>
+							</li>
+							<li>
+								<span>MongoDB</span>
 							</li>
 							<li>
 								<span>Firebase</span>
