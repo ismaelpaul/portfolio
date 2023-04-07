@@ -1,6 +1,7 @@
 import { useInView } from 'react-intersection-observer';
 import styles from '../styles/Projects.module.scss';
 import Bibliotech from './Bibliotech';
+import Entertainment from './Entertainment';
 import Invent from './Invent';
 import NcNews from './NcNews';
 
@@ -17,9 +18,12 @@ const Projects = () => {
 				>
 					Projects<span>.</span>
 				</h2>
-				<Invent />
-				<NcNews />
-				<Bibliotech />
+				<article className={styles.projectsContainer}>
+					<Invent />
+					<Entertainment />
+					<NcNews />
+					<Bibliotech />
+				</article>
 			</div>
 		</section>
 	);
