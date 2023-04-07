@@ -16,15 +16,15 @@ const ContactForm = () => {
 			if (!field.name) return;
 			formData[field.name] = field.value;
 		});
-		setInputName('');
-		setInputEmail('');
-		setInputMessage('');
 
 		await fetch('/api/mail', {
 			method: 'post',
 			body: JSON.stringify(formData),
 		}).then((response) => response.json());
 
+		setInputName('');
+		setInputEmail('');
+		setInputMessage('');
 		setWasSubmitted(true);
 	}
 
