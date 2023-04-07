@@ -62,6 +62,9 @@ const About = () => {
 						<p>Technologies I've been working with recently:</p>
 						<ul>
 							<li>
+								<span>TypeScript</span>
+							</li>
+							<li>
 								<span>JavaScript</span>
 							</li>
 							<li>
