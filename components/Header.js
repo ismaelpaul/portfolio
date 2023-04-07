@@ -8,7 +8,7 @@ const Header = () => {
 					Hi, my name is Ismael<span>.</span>
 				</p>
 				<h1>
-					I am a <span>Full Stack Developer</span> based in Manchester, UK
+					I am a <span>Software Developer</span> based in Manchester, UK
 					<span>.</span> I love building human-centric digital experiences
 					<span>.</span>
 				</h1>
