@@ -180,6 +180,21 @@
 	}
 }
 
+@media screen and (min-width: 1920px) {
+	.container {
+		.descriptionOnHover {
+			.projectDescriptionOverlay {
+				width: 32rem;
+				height: 22.9rem;
+			}
+		}
+		.ncNews {
+			width: 32rem;
+			height: auto;
+		}
+	}
+}
+
 @keyframes fade-in {
 	0% {
 		opacity: 0;
