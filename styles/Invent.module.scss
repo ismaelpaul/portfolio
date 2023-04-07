@@ -7,6 +7,7 @@
 	margin-top: 2rem;
 	opacity: 0;
 	transform: translateY(+15%);
+	gap: 1.4rem;
 
 	h3 {
 		padding-top: 2rem;
@@ -21,12 +22,18 @@
 		font-size: 0.8rem;
 		line-height: 1.2rem;
 	}
+	.description {
+		display: none;
+	}
+	.descriptionOnHover {
+		display: none;
+	}
 	.invent {
 		width: 17rem;
 		height: auto;
+		border-radius: 0.625rem;
 	}
 	.icons {
-		padding: 1rem;
 		color: a.$secondary-color;
 		font-size: 1.2rem;
 		display: flex;
@@ -34,31 +41,11 @@
 	}
 	.buttons {
 		display: flex;
-		flex-direction: column;
-		button {
-			color: a.$primary-color;
-			background-color: a.$bg-color;
-			padding: 0.8rem 6.2rem;
-			margin-bottom: 0.7rem;
-			border: 1px solid a.$primary-color;
-			border-radius: 0.3rem;
-			font-family: a.$font-semibold;
-			font-size: 0.875rem;
-			cursor: pointer;
-			&:hover {
-				color: a.$bg-color;
-				border: 1px solid a.$secondary-color;
-				background: a.$secondary-color;
-				transition: all 0.3s ease-in;
-			}
-		}
 	}
 }
 .containerAnimated {
 	animation: fade-in a.$text-load-time ease-out forwards;
 }
-
-/* extra small  */
 
 @media screen and (min-width: 320px) {
 	.container {
@@ -70,13 +57,11 @@
 			line-height: 1.3rem;
 		}
 		.icons {
-			padding: 1.1rem 0;
 			font-size: 1.3rem;
 			gap: 0.6rem;
 		}
 	}
 }
-/* small  */
 
 @media screen and (min-width: 576px) {
 	.container {
@@ -84,27 +69,15 @@
 			font-size: 1.1rem;
 		}
 		p {
-			max-width: 70%;
 			font-size: 1rem;
 			line-height: 1.5rem;
 		}
 		.icons {
-			padding: 1.5rem 0;
 			font-size: 1.4rem;
 			gap: 0.8rem;
 		}
-		.buttons {
-			flex-direction: row;
-			gap: 1rem;
-			button {
-				padding: 0.5rem 3rem;
-				font-size: 1rem;
-			}
-		}
 	}
 }
-
-/* medium */
 
 @media screen and (min-width: 768px) {
 	.container {
@@ -112,26 +85,25 @@
 			font-size: 1.3rem;
 		}
 		.invent {
-			width: 19rem;
+			width: 23rem;
 			height: auto;
 		}
 		.icons {
-			padding: 1.5rem 0;
 			font-size: 1.4rem;
 			gap: 0.9rem;
 		}
 	}
 }
 
-/* large */
-
 @media screen and (min-width: 992px) {
 	.container {
+		gap: 2rem;
 		h3 {
 			font-size: 1.4rem;
 		}
 		p {
-			max-width: 60%;
+			font-size: 1.2rem;
+			line-height: 1.8rem;
 		}
 		.invent {
 			width: 22rem;
@@ -143,16 +115,76 @@
 	}
 }
 
-/* extra large */
-
 @media screen and (min-width: 1200px) {
 	.container {
 		margin-top: 2rem;
 		h3 {
 			font-size: 1.5rem;
 		}
+		.projectDescription {
+			display: none;
+		}
+		.description {
+			display: none;
+		}
+		.descriptionOnHover {
+			display: contents;
+
+			.projectDescriptionOverlay {
+				position: absolute;
+				background-color: rgba(0, 0, 0, 0.8);
+				width: 25rem;
+				height: 17.9rem;
+				bottom: 3.6rem;
+				border-radius: 0.625rem;
+				box-shadow: 1px 1px 20px a.$secondary-color;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+			.projectDescriptionOverlay:hover {
+				opacity: 1;
+			}
+		}
+
 		.invent {
-			width: 30rem;
+			width: 25rem;
+			height: auto;
+		}
+		.icons {
+			font-size: 1.7rem;
+			gap: 0.9rem;
+		}
+		.buttons {
+			display: none;
+		}
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.container {
+		.descriptionOnHover {
+			.projectDescriptionOverlay {
+				width: 28rem;
+				height: 20rem;
+			}
+		}
+		.invent {
+			width: 28rem;
+			height: auto;
+		}
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.container {
+		.descriptionOnHover {
+			.projectDescriptionOverlay {
+				width: 28rem;
+				height: 20rem;
+			}
+		}
+		.invent {
+			width: 28rem;
 			height: auto;
 		}
 	}
