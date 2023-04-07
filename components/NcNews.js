@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import ncNewsMockup from '../public/imgs/ncnews-mockup.png';
+import ncNews from '../public/imgs/nc-news.png';
 import styles from '../styles/NcNews.module.scss';
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import {
@@ -12,9 +12,29 @@ import {
 } from 'react-icons/si';
 import { Tooltip } from '@nextui-org/react';
 import { useInView } from 'react-intersection-observer';
+import { useState } from 'react';
+import ProjectDescription from './ProjectDescription';
+import Buttons from './Buttons';
 
 const NcNews = () => {
+	const [isHovering, setIsHovering] = useState(false);
+
 	const { ref: containerRef, inView: isContainerVisible } = useInView();
+
+	const projectDescription =
+		'A Full Stack social news aggregation, web content rating, and discussion web app.';
+
+	const projectLink = 'https://nc-news-ismael.netlify.app/';
+
+	const githubLink = 'https://github.com/ismaelpaul/fe-nc-news';
+
+	const handleMouseOver = () => {
+		setIsHovering(true);
+	};
+
+	const handleMouseOut = () => {
+		setIsHovering(false);
+	};
 
 	return (
 		<div
@@ -24,15 +44,30 @@ const NcNews = () => {
 			}`}
 		>
 			<h3>NC News</h3>
+			<span
+				onMouseOut={handleMouseOut}
+				onMouseOver={handleMouseOver}
+				className={isHovering ? styles.descriptionOnHover : styles.description}
+			>
+				<span className={styles.projectDescriptionOverlay}>
+					<ProjectDescription
+						projectDescription={projectDescription}
+						projectLink={projectLink}
+						githubLink={githubLink}
+					/>
+				</span>
+			</span>
 			<Image
+				onMouseOut={handleMouseOut}
+				onMouseOver={handleMouseOver}
 				className={styles.ncNews}
-				src={ncNewsMockup}
+				src={ncNews}
 				alt="Notebook mockup displaying NC News interface"
 			/>
-			<p>
-				A Full Stack social news aggregation, web content rating, and discussion
-				website.
-			</p>
+			<span className={styles.projectDescription}>
+				<p>{projectDescription}</p>
+			</span>
+
 			<div className={styles.icons}>
 				<Tooltip content={'React'} css={{ fontFamily: 'OpenSans-Regular' }}>
 					<FaReact />
@@ -62,20 +97,7 @@ const NcNews = () => {
 				</Tooltip>
 			</div>
 			<div className={styles.buttons}>
-				<a
-					href="https://nc-news-ismael.netlify.app/"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<button>Project</button>
-				</a>
-				<a
-					href="https://github.com/ismaelpaul/fe-nc-news"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<button>Github</button>
-				</a>
+				<Buttons projectLink={projectLink} githubLink={githubLink} />
 			</div>
 		</div>
 	);
