@@ -1,0 +1,17 @@
+@use '../styles/abstracts' as a;
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	button {
+		color: a.$primary-color;
+		background-color: a.$bg-color;
+		padding: 0.8rem 6.2rem;
+		margin-bottom: 0.7rem;
+		border: 1px solid a.$primary-color;
+		border-radius: 0.3rem;
+		font-family: a.$font-semibold;
+		font-size: 0.875rem;
+		cursor: pointer;
+	}
+}
